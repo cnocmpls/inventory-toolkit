@@ -329,7 +329,7 @@ def process_host_and_vms(host_data, vms_on_host_data, cluster_name=None):
         "host_uuid": host_data.get("summary.hardware.uuid", "N/A"),
         "serial_number": serial_number,  # Added Serial Number
         "esxi_version": host_data.get("config.product.fullName", "N/A"),
-        "vendor": host_data.get("summary.hardware.vendor", "N/A"),
+        "manufacturer": host_data.get("summary.hardware.vendor", "N/A"),
         "model": host_data.get("summary.hardware.model", "N/A"),
         "cpu_sockets": num_cpu_pkgs_val,
         "cpu_cores_per_socket": num_cpu_cores // num_cpu_pkgs if num_cpu_pkgs > 0 and num_cpu_cores > 0 else num_cpu_cores,
